@@ -1,0 +1,510 @@
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+  background-color: #181717;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+nav a {
+  color: #e0e0e0;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ff6347;
+}
+
+
+/* Home Section Styles */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 20px 50px 20px;
+  text-align: left; /* Ensure the text is aligned left */
+}
+
+.text-section {
+  flex: 1; /* Takes up the remaining space */
+}
+
+.image-section {
+  flex: 0 0 200px; /* Takes up a fixed width for the image */
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+}
+
+#home img {
+  border-radius: 8px;
+  height: 250px;
+  width: 150px;
+  object-fit: cover;
+}
+
+
+
+#home h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#home h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  margin-bottom: 5px; /* Space between paragraphs */
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+.section {
+  background-color: #050404;
+  padding: 50px 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ff6347;
+}
+
+        
+
+
+        
+
+        .about-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #ff6347;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="email"] .filled,
+.example-2 .icon-content a[data-social="email"] ~ .tooltip {
+  background-color: #0a50e9;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem; /* Added gap to separate form elements */
+}
+
+.input {
+  margin-top: 1rem;
+  border-radius: 10px;
+  outline: 2px solid #e5533d;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1716;
+  outline-offset: 3px;
+  padding: 10px 12.5px;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 400px; /* You can adjust this value */
+}
+
+.input:hover {
+  background-color: #fe4343;
+}
+
+.input:focus {
+  outline-offset: -6px;
+  background-color: #ffffff;
+}
+
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  outline: 2px solid #e5533d;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+  align-self: flex-start; /* Align button to the start of the form */
+  margin-top: 1rem; /* Add margin to separate the button from the inputs */
+}
+
+button:hover,
+button:focus {
+  color: #ffffff;
+  background: #e5533d;
+  border: 1px solid #e5533d;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #e5533d, 0 0 20px #e5533d, 0 0 50px #e5533d,
+    0 0 100px #e5533d;
+}
+#btn:hover,
+#btn:focus {
+          color: #ffffff;
+          background: #e5533d;
+          border: 1px solid #e5533d;
+          text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+          box-shadow: 0 0 5px #e5533d, 0 0 20px #e5533d, 0 0 50px #e5533d,
+            0 0 100px #e5533d;
+        }
+
+        .contact-form button:hover {
+            background-color: #e5533d;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 190px;
+            height: 254px;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 12px;
+            gap: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.5s ease-out;
+            overflow: visible;
+        }
+          
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            left: -5px;
+            margin: auto;
+            width: 200px;
+            height: 264px;
+            border-radius: 10px;
+            background: linear-gradient(-45deg, #ff6347 0%, #40c9ff 100%);
+            z-index: -10;
+            pointer-events: none;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+        .card::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(-45deg, #ff6347 0%, #00dbde 100%);
+            transform: translate3d(0, 0, 0) scale(0.95);
+            filter: blur(20px);
+        }
+          
+        .heading {
+            font-size: 20px;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+          
+        .card p:not(.heading) {
+            font-size: 14px;
+        }
+          
+        .card p:last-child {
+            color: #ff6347;
+            font-weight: 600;
+        }
+          
+        .card:hover::after {
+            filter: blur(30px);
+        }
+          
+        .card:hover::before {
+            transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+        }
+          
+        .card-button {
+            transform: translate(-50%, 125%);
+            width: 60%;
+            border-radius: 1rem;
+            border: none;
+            background-color: #ff6347;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.3s ease-out;
+        }
+          
+        .card:hover .card-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+
+        
+.section {
+  padding: 60px 0;
+}
+
+.skills-section {
+  text-align: center;
+}
+
+.skills-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.skills-icons ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a i {
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="python"] .filled,
+.example-2 .icon-content a[data-social="python"] ~ .tooltip {
+  background-color: #306998;
+}
+
+.example-2 .icon-content a[data-social="sql"] .filled,
+.example-2 .icon-content a[data-social="sql"] ~ .tooltip {
+  background-color: #00758f;
+}
+
+.example-2 .icon-content a[data-social="powerbi"] .filled,
+.example-2 .icon-content a[data-social="powerbi"] ~ .tooltip {
+  background-color: #f4c20d;
+}
+
+.example-2 .icon-content a[data-social="tableau"] .filled,
+.example-2 .icon-content a[data-social="tableau"] ~ .tooltip {
+  background-color: #6651d2; /* Change this to match your desired tooltip background */
+}
+
+.icon-tableau {
+  width: 200px; 
+  height: 20px; 
+  display: inline-block;
+}
+
+.example-2 .icon-content a[data-social="excel"] .filled,
+.example-2 .icon-content a[data-social="excel"] ~ .tooltip {
+  background-color: #217346;
+}
+
+.example-2 .icon-content a[data-social="redshift"] .filled,
+.example-2 .icon-content a[data-social="redshift"] ~ .tooltip {
+  background-color: #d72b3f;
+}
+
+.example-2 .icon-content a[data-social="salesforce"] .filled,
+.example-2 .icon-content a[data-social="salesforce"] ~ .tooltip {
+  background-color: #1798c1;
+}
+
